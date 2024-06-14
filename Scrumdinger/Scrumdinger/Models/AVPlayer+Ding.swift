@@ -1,18 +1,9 @@
-//
-//  AVPlayer+Ding.swift
-//  Scrumdinger
-//
-//  Created by Alessandro Gattico on 14/06/24.
-//
+import Foundation
+import AVFoundation
 
-import SwiftUI
-
-struct AVPlayer_Ding: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    AVPlayer_Ding()
+extension AVPlayer {
+    static let sharedDingPlayer: AVPlayer = {
+        guard let url = Bundle.main.url(forResource: "ding", withExtension: "wav") else { fatalError("Failed to find sound file.") }
+        return AVPlayer(url: url)
+    }()
 }
