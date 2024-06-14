@@ -10,11 +10,11 @@ struct ThemeView: View {
             .background(theme.mainColor)
             .foregroundColor(theme.accentColor)
             .clipShape(RoundedRectangle(cornerRadius: 4))
-        
-        
     }
 }
 
-#Preview {
-    ThemeView(theme: .buttercup)
+struct ThemeView_Previews: PreviewProvider {
+    static var previews: some View {
+        ThemeView(theme: .buttercup)
+    }
 }

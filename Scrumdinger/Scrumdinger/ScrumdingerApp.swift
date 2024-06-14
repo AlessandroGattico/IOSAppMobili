@@ -12,5 +12,4 @@ struct ScrumdingerApp: App {
 }
 
 
-//capitolo 4
 
